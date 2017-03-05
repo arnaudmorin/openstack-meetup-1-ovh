@@ -94,15 +94,56 @@
                     <section data-markdown data-background="data/dolphin.gif">
                         ## MySQL
                     </section>
+                    <section>
+                        <ul>
+                            <li>Cluster de 3 noeuds</li>
+                            <li class="fragment">Pas de HAproxy</li>
+                            <ul>
+                                <li>Mauvaise expérience</li>
+                                <li>Performances ?</li>
+                                <li>En cas de problème, mécanisme custom</li>
+                            </ul>
+                            <li class="fragment">Noeud dédié aux ecritures</li>
+                            <ul>
+                                <li>Limiter les deadlocks</li>
+                            </ul>
+                            <li class="fragment">Long running requests</li>
+                            <ul>
+                                <li>Ralentissent les APIs</li>
+                                <li>Il faut les logger</li>
+                            </ul>
+                            <li class="fragment">Assez bonne tolérance à la latence réseau...</li>
+                        </ul>
+                    </section>
                 </section>
                 <section>
                     <section data-markdown data-background="data/nova.gif">
                         ## Nova
                     </section>
+                    <section>
+                        ### Nova API
+                        * scale assez facile
+                        * multiplication des backends
+                    </section>
+                    <section>
+                        ### Nova custom scheduler
+                        * stack (versus spread)
+                            * race condition quand on scale
+                        * 1 host = 1 flavor
+                    </section>
+                    <section>
+                        ### Nova compute
+                        * déconnexion de rabbitmq
+                            * pas toujours de reconnexion auto
+                            * robot
+                    </section>
                 </section>
                 <section>
                     <section data-markdown data-background="data/neutron.gif">
                         ## Neutron
+                    </section>
+                    <section>
+                        ### blabla
                     </section>
                 </section>
                 <section>
