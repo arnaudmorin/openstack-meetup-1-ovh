@@ -73,47 +73,51 @@
                     <section data-markdown data-background="data/rabbit.gif">
                         ## RabbitMQ
                     </section>
-                    <section>
-                        <ul>
-                            <li>Cluster de 3 noeuds</li>
-                            <li class="fragment">Tuning de conf</li>
-                            <ul class="fragment">
-                                <li>pause_minority VS autoheal</li>
-                                <li>sysctl</li>
-                            </ul>
-                            <li class="fragment">Context switching</li>
-                            <ul class="fragment">
-                                <li>+ de 150k</li>
-                                <li>sélection de 2 serveurs sur les 3</li>
-                            </ul>
-                            <li class="fragment">Attention à la latence réseau...</li>
-                        </ul>
+                    <section data-markdown>
+                        ### Cluster
+                        * minimum 3 noeuds
+                    </section>
+                    <section data-markdown>
+                        ### Tuning de conf
+                        * pause_minority VS autoheal
+                        * sysctl
+                    <section data-markdown>
+                        ### Context switching</li>
+                        * + de 150k
+                        * sélection de 2 serveurs sur les 3
+                    </section>
+                    <section data-markdown>
+                        ### Très sensible
+                        * latence
+                        * loss
                     </section>
                 </section>
                 <section>
                     <section data-markdown data-background="data/dolphin.gif">
                         ## MySQL
                     </section>
-                    <section>
-                        <ul>
-                            <li>Cluster de 3 noeuds</li>
-                            <li class="fragment">Pas de HAproxy</li>
-                            <ul>
-                                <li>Mauvaise expérience</li>
-                                <li>Performances ?</li>
-                                <li>En cas de problème, mécanisme custom</li>
-                            </ul>
-                            <li class="fragment">Noeud dédié aux ecritures</li>
-                            <ul>
-                                <li>Limiter les deadlocks</li>
-                            </ul>
-                            <li class="fragment">Long running requests</li>
-                            <ul>
-                                <li>Ralentissent les APIs</li>
-                                <li>Il faut les logger</li>
-                            </ul>
-                            <li class="fragment">Assez bonne tolérance à la latence réseau...</li>
-                        </ul>
+                    <section data-markdown>
+                        ### Cluster Galera
+                        * minimum 3 noeuds
+                    </section>
+                    <section data-markdown>
+                        ### Pas de HA proxy
+                        * Mauvaise expérience
+                        * Performances ?
+                        * En cas de problème
+                            * mécanisme custom
+                            * désactivation des serveurs connectés
+                    </section>
+                    <section data-markdown>
+                        ### Deadlocks ?
+                        * Noeud dédié aux ecritures
+                    </section>
+                    <section data-markdown>
+                        ### Long running requests
+                        * Ralentissent les APIs
+                        * Il faut les logger
+                        * Souvent due a la taille des index
+                            * Purge de temps en temps
                     </section>
                 </section>
                 <section>
