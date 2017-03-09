@@ -148,7 +148,27 @@
                         ## Neutron
                     </section>
                     <section data-markdown>
-                        ### blabla
+                        ### Architecture standard
+                        schéma
+                    </section>
+                    <section data-markdown>
+                        ### Architecture OVH
+                        schéma
+                    </section>
+                    <section data-markdown>
+                        ### Points forts
+                        * pas de SPOF
+                            * tous les hosts font du routage
+                            * pas de neutron l3 agent
+                        * moins complexe
+                        * pas de NAT
+                    </section>
+                    <section data-markdown>
+                        ### Points faibles
+                        * pas de NAT
+                        * pas de floating IP
+                            * IP Fail Over
+                        * /32 dans la VM (/128 pour IPv6)
                     </section>
                 </section>
                 <section>
