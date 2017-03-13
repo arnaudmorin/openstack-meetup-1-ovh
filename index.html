@@ -73,7 +73,7 @@
 										</aside>
                 </section>
                 <section>
-                    <section data-markdown data-background="data/rabbit.gif">
+                    <section data-markdown data-background="data/rabbit.gif" data-separator-notes="^Note:">
                         ## RabbitMQ
                     </section>
                     <section data-markdown>
@@ -81,29 +81,29 @@
                         * minimum 3 noeuds
 
 												Note:
-												* Au départ 2 noeuds problème déconseillé dans un mode cluster
+												Au départ 2 noeuds problème déconseillé dans un mode cluster
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Tuning de conf
                         * pause_minority VS autoheal
                         * sysctl
 
 												Note:
-												* pause_minority c'est mieux pour nous
-												* augmentation des timeout TCP
+												pause_minority c'est mieux pour nous
+												augmentation des timeout TCP
                     </section>
                     <section data-markdown>
                         ### Context switching</li>
-                        * + de 150k
+                        * plus de 150k
                         * sélection de 2 serveurs sur les 3
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Très sensible
                         * latence
                         * loss
 
 												Note:
-												* Augementation du domaine de panne si noeud pas de le meme réseau
+												Augementation du domaine de panne si noeud pas de le meme réseau
                     </section>
                 </section>
                 <section>
