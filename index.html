@@ -68,6 +68,9 @@
                         <li class="fragment">Pourquoi ?</li>
                         <li class="fragment">Comment ?</li>
                     </ol>
+										<aside class="notes">
+														Nombre d'instance / Nombre de host / Nombre de région
+										</aside>
                 </section>
                 <section>
                     <section data-markdown data-background="data/rabbit.gif">
@@ -76,11 +79,18 @@
                     <section data-markdown>
                         ### Cluster
                         * minimum 3 noeuds
+
+												Note:
+												* Au départ 2 noeuds problème déconseillé dans un mode cluster
                     </section>
                     <section data-markdown>
                         ### Tuning de conf
                         * pause_minority VS autoheal
                         * sysctl
+
+												Note:
+												* pause_minority c'est mieux pour nous
+												* augmentation des timeout TCP
                     </section>
                     <section data-markdown>
                         ### Context switching</li>
@@ -91,6 +101,9 @@
                         ### Très sensible
                         * latence
                         * loss
+
+												Note:
+												* Augementation du domaine de panne si noeud pas de le meme réseau
                     </section>
                 </section>
                 <section>
