@@ -69,41 +69,44 @@
                         <li class="fragment">Comment ?</li>
                     </ol>
 										<aside class="notes">
-														Nombre d'instance / Nombre de host / Nombre de région
+												Nombre d'instance / Nombre de host / Nombre de région
 										</aside>
                 </section>
                 <section>
-                    <section data-markdown data-background="data/rabbit.gif" data-separator-notes="^Note:">
+                    <section data-markdown data-background="data/rabbit.gif">
                         ## RabbitMQ
                     </section>
                     <section data-markdown>
                         ### Cluster
                         * minimum 3 noeuds
 
-												Note:
-												Au départ 2 noeuds problème déconseillé dans un mode cluster
+												<aside class="notes">
+														Au départ 2 noeuds problème déconseillé dans un mode cluster
+												</aside>
                     </section>
-                    <section data-markdown data-separator-notes="^Note:">
+                    <section data-markdown>
                         ### Tuning de conf
                         * pause_minority VS autoheal
                         * sysctl
 
-												Note:
-												pause_minority c'est mieux pour nous
-												augmentation des timeout TCP
+												<aside class="notes">
+														pause_minority c'est mieux pour nous
+														augmentation des timeout TCP
+												</aside>
                     </section>
                     <section data-markdown>
                         ### Context switching</li>
                         * plus de 150k
                         * sélection de 2 serveurs sur les 3
                     </section>
-                    <section data-markdown data-separator-notes="^Note:">
+                    <section data-markdown>
                         ### Très sensible
                         * latence
                         * loss
 
-												Note:
-												Augementation du domaine de panne si noeud pas de le meme réseau
+												<aside class="notes">
+														Augementation du domaine de panne si noeud pas de le meme réseau
+												</aside>
                     </section>
                 </section>
                 <section>
