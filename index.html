@@ -57,10 +57,6 @@
                         ![OpenStack](data/openstack_logo.png)
                     </section>
                 </section>
-                <section data-markdown>
-                    ## Architecture classique
-                    ![ArchiOpenStackClassique](data/archi-openstack-classic.jpg)
-                </section>
                 <section>
                     <h2>Scale</h2>
                     <ol>
@@ -69,8 +65,19 @@
                         <li class="fragment">Comment ?</li>
                     </ol>
                     <aside class="notes">
-                        Nombre d'instance / Nombre de host / Nombre de région
+                        <ul>
+                            <li>Nombre de host : entre 1000 et 1500</li>
+                            <li>Nombre de région : 6 </li>
+
+                            <li>Mutualisation des ressources / problématique de cout</li>
+                            <li>Pour que les clients est la possilité de faire des grosses infrastructure</li>
+                            <li>Defi technique</li>
+                        </ul>
                     </aside>
+                </section>
+                <section data-markdown>
+                    ## Architecture classique
+                    ![ArchiOpenStackClassique](data/archi-openstack-classic.jpg)
                 </section>
                 <section>
                     <section data-markdown data-background="data/rabbit.gif">
@@ -92,11 +99,16 @@
                         Note:
                         * pause_minority c'est mieux pour nous
                         * augmentation des timeout TCP
+
+                        * impact d'un split : mauvaise communication dans l'infra openstack
+                        * les service impacté majoritairement impacté nova est neutron
+                        * Le système s'emballe à cause des timeout port en build / nova compute déconnecté
                     </section>
                     <section data-markdown>
                         ### Context switching</li>
                         * plus de 150k
                         * sélection de 2 serveurs sur les 3
+
                     </section>
                     <section data-markdown data-separator-notes="^Note:">
                         ### Très sensible
@@ -217,15 +229,16 @@
                         ## Automatisation
                     </section>
                     <section data-markdown>
+                        ## Deploy as a Service (DaaS)
+                    </section>
+                    <section data-markdown>
                         ## Puppet
                     </section>
-                </section>
-                <section data-markdown>
-                    * monitoring
-                    * design to fail
-                    * crashtest
-                    * integration continue
-                    * prodding chaque semaine
+                    <section data-markdown>
+                        ## Autres
+                        * integration continue
+                        * prodding chaque semaine
+                    </section>
                 </section>
             </div>
         </div>
