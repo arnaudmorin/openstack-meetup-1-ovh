@@ -131,7 +131,7 @@
                         ### Long running requests
                         * Ralentissent les APIs
                         * Il faut les logger
-                        * Souvent due a la taille des index
+                        * Souvent due a la taille des tables
                             * Purge de temps en temps
                     </section>
                 </section>
@@ -144,17 +144,23 @@
                         * scale assez facile
                         * multiplication des backends
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Nova custom scheduler
                         * stack (versus spread)
                             * race condition quand on scale
                         * 1 host = 1 flavor
+
+                        Note:
+                         * il faut des autant de host que de flavor, on peut pas demarrer petit
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Nova compute
                         * déconnexion de rabbitmq
                             * pas toujours de reconnexion auto
                             * robot
+
+                        Note:
+                        * probleme avec oslo.messaging, fixe upsteam, pas facile de backport
                     </section>
                 </section>
                 <section>
