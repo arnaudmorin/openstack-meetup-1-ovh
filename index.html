@@ -225,20 +225,38 @@
                     </section>
                 </section>
                 <section>
-                    <section data-markdown data-background="data/robots.gif">
+                    <section data-markdown data-background="data/robots.gif" data-separator-notes="^Note:">
                         ## Automatisation
+
+                        Note:
+                        On ne peut pas parler de sclaing sans parler d'automatisation
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ## Deploy as a Service (DaaS)
+
+                        Note:
+                        * serveur = matiere premiere
+                        * api pour gerer les serveurs (install, reboot, config raid, postinstall, etc)
+                        * DaaS
+                            * gestion de flotte de serveurs (groupe, cluster)
+                            * scaling automatique des groupes
+                            * gestion cycle de vie d'un serveur auto
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ## Puppet
+
+                        Note:
+                        * puppet gere la partie config software, apres DaaS
+                        * 1500 hosts = facile pour puppet (un pm par region)
                     </section>
                     <section data-markdown>
                         ## Autres
                         * integration continue
                         * prodding chaque semaine
                     </section>
+                </section>
+                <section data-markdown data-background="data/echec.gif">
+                    ## Conclusion
                 </section>
             </div>
         </div>
