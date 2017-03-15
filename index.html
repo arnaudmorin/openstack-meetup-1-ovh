@@ -46,11 +46,17 @@
                     <section data-markdown>
                         ## Que fait-on ?
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Public Cloud
+
+                        Note:
+                        ARNAUD
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### VPS
+
+                        Note:
+                        PIERRE
                     </section>
                     <section data-markdown data-background="data/nerds2.gif">
                         # OpenStack
@@ -66,6 +72,7 @@
                     </ol>
                     <aside class="notes">
                         <ul>
+                            <li>ARNAUD</li>
                             <li>Nombre de host : entre 1000 et 1500</li>
                             <li>Nombre de région : 6 </li>
 
@@ -106,6 +113,7 @@
                         * minimum 3 noeuds
 
                         Note:
+                        * ARNAUD
                         * Au départ 2 noeuds
                         * problème déconseillé dans un mode cluster
                     </section>
@@ -115,6 +123,7 @@
                         * sysctl
 
                         Note:
+                        * ARNAUD
                         * pause_minority c'est mieux pour nous
                         * augmentation des timeout TCP
 
@@ -124,6 +133,7 @@
                     </section>
                     <section data-markdown>
                         ### Context switching</li>
+                        * ARNAUD
                         * plus de 150k
                         * sélection de 2 serveurs sur les 3
 
@@ -134,6 +144,7 @@
                         * loss
 
                         Note:
+                        * ARNAUD
                         * Augementation du domaine de panne si noeud pas dans le meme réseau
                     </section>
                 </section>
@@ -145,24 +156,36 @@
                         ### Cluster Galera
                         * minimum 3 noeuds
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Pas de HA proxy
                         * Mauvaise expérience
                         * Performances ?
                         * En cas de problème
                             * mécanisme custom
                             * désactivation des serveurs connectés
+
+                        Note:
+                        * PIERRE
+                        * METTRE DES NOTES
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Deadlocks ?
                         * Noeud dédié aux ecritures
+
+                        Note:
+                        * PIERRE
+                        * METTRE DES NOTES
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Long running requests
                         * Ralentissent les APIs
                         * Il faut les logger
                         * Souvent due a la taille des tables
                             * Purge de temps en temps
+
+                        Note:
+                        * PIERRE
+                        * METTRE DES NOTES
                     </section>
                 </section>
                 <section>
@@ -197,11 +220,11 @@
                     <section data-markdown data-background="data/neutron.gif">
                         ## Neutron
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-transition="fade-out">
                         ### Architecture standard
                         ![Neutron Networking](data/networking_no_ovh.png)
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-transition="fade-out">
                         ### Architecture OVH
                         ![Neutron Networking made in OVH](data/networking_ovh.png)
                     </section>
