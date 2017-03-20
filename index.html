@@ -75,8 +75,9 @@
                     <aside class="notes">
                         <ul>
                             <li>ARNAUD</li>
-                            <li>Nombre de host : entre 1000 et 1500</li>
+                            <li>Nombre de host : jusqu'à 1500</li>
                             <li>Nombre de région : 6 </li>
+                            <li>plus de 120 000  instances </li>
 
                             <li>Mutualisation des ressources / problématique de cout</li>
                             <li>Pour que les clients est la possilité de faire des grosses infrastructure</li>
@@ -87,7 +88,7 @@
                 <section>
                     <section data-markdown data-transition="fade-out">
                         ## Architecture classique
-                        ![ArchiOpenStackClassique](data/openstack-logical-arch-base.png)
+                        ![ArchiOpenStackClassique](data/openstack-logical-arch.png)
                     </section>
                     <section data-markdown data-transition="fade-out">
                         ## Architecture classique
@@ -157,9 +158,14 @@
                     <section data-markdown data-background="data/dolphin.gif">
                         ## MySQL
                     </section>
-                    <section data-markdown>
+                    <section data-markdown data-separator-notes="^Note:">
                         ### Cluster Galera
                         * minimum 3 noeuds
+
+                        Note:
+                        * PIERRE
+                        * 2 à 3 noeuds
+                        * héberge les services cinder, nova, neutron, glance
                     </section>
                     <section data-markdown data-separator-notes="^Note:">
                         ### Pas de HA proxy
@@ -171,7 +177,8 @@
 
                         Note:
                         * PIERRE
-                        * METTRE DES NOTES
+                        * Exemple metadata agent
+                        * controleur répartie sur les noeuds galera
                     </section>
                     <section data-markdown data-separator-notes="^Note:">
                         ### Deadlocks ?
@@ -179,7 +186,7 @@
 
                         Note:
                         * PIERRE
-                        * METTRE DES NOTES
+                        * Keystones
                     </section>
                     <section data-markdown data-separator-notes="^Note:">
                         ### Long running requests
@@ -190,7 +197,7 @@
 
                         Note:
                         * PIERRE
-                        * METTRE DES NOTES
+                        * 
                     </section>
                 </section>
                 <section>
